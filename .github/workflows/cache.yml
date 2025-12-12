@@ -20,7 +20,7 @@ jobs:
 
       - name: cache (with restore-keys)
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           key: demo-${{ runner.os }}-${{ github.sha }}
           path: ${{ github.workspace }}/dummy
@@ -61,7 +61,7 @@ jobs:
 
       - name: cache (NO restore-keys)
         id: cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           key: demo-${{ runner.os }}-${{ github.sha }}
           path: ${{ github.workspace }}/dummy
